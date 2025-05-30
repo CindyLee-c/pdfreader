@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Speed Reader</title>
+    <link rel="stylesheet" href="/static/style.css"> </head>
+<body>
+    <main>
+        <h1>PDF Speed Reader</h1> <div class="upload-section"> <div class="custom-file-upload"> <label for="pdfInput" class="styled-button">Choose File</label> <input type="file" id="pdfInput" onchange="displayFileName(this); uploadPDF();"> <span id="fileNameDisplay">Geen bestand gekozen</span> </div>
+            <button id="loadNewButton" onclick="loadNewPDF()" style="display: none;">Load New PDF</button>
+            <span id="estimate" class="estimate">Geschat: - min</span> </div>
+        <div id="uploadStatus" class="upload-status" style="min-height: 20px; margin-bottom: 1rem;">
+            </div>
+
+        <div class="text-wrapper">
+            <div class="text-display" id="textDisplay">...</div> </div>
+
+        <div class="controls"> <button onclick="bookmark()">🔖</button> <button onclick="rewind()">⏮</button> <button onclick="pause()">⏸</button> <button onclick="play()">▶</button> <input type="range" id="speedSlider" min="100" max="600" step="50" value="300" oninput="updateWPM()"> <span id="wpmDisplay">300 WPM</span> </div>
+
+        <div class="advanced-controls" style="margin-top: 1rem; display: flex; gap: 1rem; align-items: center;">
+            <div>
+                <label for="chunkSizeInput">Words/Chunk:</label>
+                <input type="number" id="chunkSizeInput" value="3" min="1" max="10" style="width: 50px;">
+            </div>
+            <div>
+                <label for="pageJumpInput">Go to Page:</label>
+                <input type="number" id="pageJumpInput" min="1" style="width: 60px;">
+                <button onclick="jumpToPageHandler()">Go</button>
+            </div>
+            <span id="totalPagesDisplay" style="font-size: 0.9rem; color: #555;"></span>
+        </div>
+
+        <div id="bookmarkNav" class="bookmark-nav"></div> </main>
+    <script src="/static/script.js"></script> </body>
+</html>

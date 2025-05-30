@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 3rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.upload-section {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.text-display {
+    font-size: 2rem;
+    min-height: 3rem;
+    min-width: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.controls button {
+    padding: 0.6rem 0.9rem;
+    font-size: 1.1rem;
+    background-color: #f0f0f0;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.controls button:hover {
+    background-color: #e5e5e5;
+}
+
+input[type=range] {
+    accent-color: #007aff;
+    height: 4px;
+}
+
+
+/* Styling voor de container van de custom file input */
+.custom-file-upload {
+    position: relative; /* Belangrijk voor positionering van de input */
+    display: inline-flex; /* Om de label en de bestandsnaam naast elkaar te krijgen */
+    align-items: center;
+    gap: 10px; /* Ruimte tussen knop en bestandsnaam */
+}
+
+/* De daadwerkelijke input verbergen */
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Maak de input volledig transparant */
+    cursor: pointer;
+    z-index: 10; /* Zorg dat het klikbaar is boven de label */
+}
+
+/* Styling voor de "Choose File" knop (het label) */
+.custom-file-upload .styled-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block; /* Zodat padding etc. werkt */
+    white-space: nowrap; /* Voorkomt dat de tekst breekt */
+}
+
+/* Stijl voor de bestandsnaam weergave */
+#fileNameDisplay {
+    font-size: 1rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Voeg ... toe als de naam te lang is */
+    max-width: 150px; /* Limiteer de breedte */
+}
+
+/* Aanpassing van de bestaande upload-section voor betere uitlijning */
+.upload-section {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center; /* Zorgt dat alles netjes uitlijnt */
+}
+
+
+.styled-button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+.styled-button input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+#chooseFileButton {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#chooseFileButton {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
