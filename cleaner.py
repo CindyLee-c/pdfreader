@@ -1,4 +1,3 @@
-# cleaner.py
 import re
 from PyPDF2 import PdfReader # [cite: 5] PyPDF2 is listed as a requirement
 from urllib.parse import urlparse

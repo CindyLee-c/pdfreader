@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, render_template, request, jsonify #
 import os
 from cleaner import extract_and_clean_pdf_text #

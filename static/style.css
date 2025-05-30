@@ -165,3 +165,9 @@ input[type=range] {
     display: inline-block;
     margin-right: 10px;
 }
+
+/* Nieuwe stijl voor het centreren van uploadStatus */
+#uploadStatus {
+    text-align: center;
+    width: 100%; /* Zorgt ervoor dat het de volledige breedte van de parent inneemt om te centreren */
+}
